@@ -1,0 +1,8 @@
+// Converts string into a String[] type array with a split ","
+// If there is no need to split words, use .toCharArray()
+
+String[] ary = "abc,def,g".split(",");
+		
+		for (int i = 0; i < ary.length; i++ ) {
+			System.out.println(ary[i]);
+		}
