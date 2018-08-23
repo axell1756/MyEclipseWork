@@ -10,10 +10,6 @@ public class Paint {
 	public Paint () {
 		
 	}
-
-	Cheap c = new Cheap();
-	Average a = new Average();
-	Expensive e = new Expensive();
 	
 	public String getName() {
 		return name;
@@ -47,7 +43,7 @@ public class Paint {
 		this.coverage = coverage;
 	}
 	
-	public String whichOne(int x1, int x2, int y) {
+	public String whichOne(int x1, int x2, int y, Paint c, Paint a, Paint e) {
 		
 		int wallOne = x1 * y;
 		int wallTwo = x2 * y;
@@ -57,11 +53,16 @@ public class Paint {
 		int cCovers = c.getCoverage() * c.getVolume();
 		int aCovers = a.getCoverage() * a.getVolume();
 		
-		int eBuckets = totalToCover % eCovers;
-		int cBuckets = totalToCover % cCovers;
-		int aBuckets = totalToCover % aCovers;
+		int eBuckets = totalToCover / eCovers;
+		int cBuckets = totalToCover / cCovers;
+		int aBuckets = totalToCover / aCovers;
 		
-		int ePrice = eBuckets * e.getPrice();
-		int cPrice = cBuckets * c.getPrice();
+		double ePrice = eBuckets * e.getPrice();
+		double cPrice = cBuckets * c.getPrice();
+		double aPrice = aBuckets * a.getPrice();
+		
+		return "Price to cover whole room: \n" + "Cheap paint - " + cPrice + "\n" +
+				"Average paint - " + aPrice + "\n" +
+				"Expensive paint - " + ePrice;
 	}
 }

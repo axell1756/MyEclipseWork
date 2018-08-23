@@ -10,6 +10,7 @@ public class Runable {
 		Average a = new Average("AverageJoes", 15, 17.99, 11);
 		Expensive e = new Expensive("DuluxourousPaints", 10, 25, 20);
 		
+		System.out.println(p.whichOne(100, 50, 6, c, a, e));
 		
 	}
 }
