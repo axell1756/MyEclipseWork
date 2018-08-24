@@ -1,0 +1,6 @@
+
+0Person [getName()=Mike, getOccipation()=o, getPersonArray()=, getAge()=1]
+1Person [getName()=Sam, getOccipation()=o1, getPersonArray()=, getAge()=2]
+2Person [getName()=Tom, getOccipation()=o2, getPersonArray()=, getAge()=3]
+3Person [getName()=Quentin, getOccipation()=o3, getPersonArray()=, getAge()=4]
+4Person [getName()=Siv, getOccipation()=o4, getPersonArray()=, getAge()=5]
